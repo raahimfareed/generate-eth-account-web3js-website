@@ -10,7 +10,7 @@ window.onload = () => {
 
 const generate = () => {
   /// <reference path="Web3.d.ts" />
-  const web3: Web3 = new Web3(process.env.ENDPOINT_ADDRESS || "");
+  const web3: Web3 = new Web3("https://mainnet.infura.io/v3/9db181b291444e198e85af740ce8435c");
   const addressInput: HTMLInputElement | null = document.getElementById("address") as HTMLInputElement;
   const keyInput: HTMLInputElement | null = document.getElementById("key") as HTMLInputElement
 
