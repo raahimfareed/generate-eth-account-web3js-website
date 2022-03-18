@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ethereum Blockchain Account Generator</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100">
+    <div id="app" class="min-h-screen p-10 w-full max-w-[600px] mx-auto">
+      <h1 class="text-4xl font-bold">Ethereum Address Generator</h1>
+      <div class="mt-4 p-10 shadow-md bg-white w-full rounded-lg">
+        <div class="mb-3">
+          <label for="address">Address</label>
+          <div class="flex">
+            <input
+              type="text"
+              id="address"
+              class="rounded-lg px-2 w-full border-2 transition-[border] outline-none border-gray-200 hover:border-gray-400 active:border-gray-600 focus:border-gray-600"
+              disabled
+            />
+            <button
+              class="bg-blue-700 rounded-full border-0 px-6 py-1 ml-1 text-white font-bold hover:bg-blue-900 transition-[background-color]"
+              data-target="#address"
+              onclick="copy(this)"
+            >
+              Copy
+            </button>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="key">Private Key</label>
+          <div class="flex">
+            <input
+              type="password"
+              id="key"
+              class="rounded-lg px-2 w-full border-2 transition-[border] outline-none border-gray-200 hover:border-gray-400 active:border-gray-600 focus:border-gray-600"
+              disabled
+            />
+            <button
+              class="bg-red-700 rounded-full border-0 px-6 py-1 ml-1 text-white font-bold hover:bg-red-900 transition-[background-color]"
+              data-target="#key"
+              onclick="reveal(this)"
+            >
+              Reveal
+            </button>
+            <button
+              class="bg-blue-700 rounded-full border-0 px-6 py-1 ml-1 text-white font-bold hover:bg-blue-900 transition-[background-color]"
+              data-target="#key"
+              onclick="copy(this)"
+            >
+              Copy
+            </button>
+          </div>
+        </div>
+        <button
+          class="bg-green-700 rounded-full border-0 px-6 py-1 ml-1 text-white font-bold hover:bg-green-900 transition-[background-color]"
+          onclick="generate()"
+        >
+          Regenerate
+        </button>
+      </div>
+      <div class="mt-4 p-10 shadow-md bg-white w-full rounded-lg">
+        Check out my other projects here:
+        <a
+          href="https://dev.raahim.com.pk"
+          class="text-blue-500 underline hover:text-blue-700"
+          >dev.raahim.com.pk</a
+        >
+      </div>
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.7.1/web3.min.js"
+      integrity="sha512-GKw4QT/RccGJIwQxY3MhyiQ5pHrhQ8SuKFEafV+WcpOvtz7iYFQuQGFCvmGlHLctJTe8KrWU1FqvF7VOkEAJtw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
